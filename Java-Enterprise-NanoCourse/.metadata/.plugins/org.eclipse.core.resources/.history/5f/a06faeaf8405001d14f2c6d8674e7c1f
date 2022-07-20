@@ -1,0 +1,22 @@
+package br.com.java.testes;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.java.dao.CarrosDAO;
+
+public class TesteCarrosDAO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPQL3");
+		EntityManager em = emf.createEntityManager();
+		
+		CarrosDAO CDao = new CarrosDAO(em);		
+		
+		em.close();
+		emf.close();
+	}
+
+}

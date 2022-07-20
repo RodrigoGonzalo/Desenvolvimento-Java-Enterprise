@@ -1,0 +1,29 @@
+package br.com.java.testes;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.java.dao.ProprietarioDAO;
+import br.com.java.entidades.Genero;
+import br.com.java.entidades.Proprietario;
+
+public class TestesProprietarioDAO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPQL3");
+		EntityManager em = emf.createEntityManager();
+		
+		ProprietarioDAO PDao = new ProprietarioDAO(em);
+		Proprietario entidade = new Proprietario("Francisco Lima", "61535152079", "franciscolima@outlook.com", 
+				new GregorianCalendar(1965, Calendar.AUGUST, 16), new GregorianCalendar(2017, Calendar.JULY, 18), Genero.MASCULINO);
+		
+		PDao.Cadastrar(entidade);
+
+	}
+
+}

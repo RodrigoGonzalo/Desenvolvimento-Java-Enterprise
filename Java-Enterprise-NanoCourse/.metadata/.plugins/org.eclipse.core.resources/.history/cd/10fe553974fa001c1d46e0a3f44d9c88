@@ -1,0 +1,5 @@
+package br.com.java.jpql.dao;
+
+public class GenericDAO {
+
+}

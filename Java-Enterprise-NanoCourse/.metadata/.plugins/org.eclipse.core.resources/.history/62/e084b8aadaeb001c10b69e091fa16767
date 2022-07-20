@@ -1,0 +1,5 @@
+package br.com.java.daogenerico.dao;
+
+public class ClienteDAO {
+
+}

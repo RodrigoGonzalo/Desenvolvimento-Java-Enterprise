@@ -1,0 +1,12 @@
+package br.com.java.testes;
+
+public class TestesProprietarioDAO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPQL3");
+		EntityManager em = emf.createEntityManager();
+
+	}
+
+}

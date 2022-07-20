@@ -1,0 +1,12 @@
+package br.com.java.entidades;
+
+import java.util.Calendar;
+
+public class Proprietario {
+	private Integer CódigoProprietário;
+	private String Nome;
+	private String Cpf;
+	private String Email;
+	private Calendar DataNascmiento;
+	private Calendar DataCompra;
+}

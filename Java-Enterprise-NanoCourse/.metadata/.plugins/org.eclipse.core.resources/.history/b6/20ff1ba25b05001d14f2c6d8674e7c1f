@@ -1,0 +1,25 @@
+package br.com.java.entidades;
+
+import java.util.Calendar;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_proprietario")
+public class Proprietario {
+	
+	@Id
+	@SequenceGenerator(name = "proprietario", sequenceName = "sq_tb_proprietario", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "proprietario")
+	private Integer CódigoProprietário;
+	private String Nome;
+	private String Cpf;
+	private String Email;
+	private Calendar DataNascmiento;
+	private Calendar DataCompra;
+}

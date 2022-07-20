@@ -1,0 +1,29 @@
+package br.com.java.testes;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.java.dao.ProprietarioDAO;
+import br.com.java.entidades.Proprietario;
+
+public class TesteProprietarioDAO {
+	public static void main(String[] args) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPQL3");
+		EntityManager em = emf.createEntityManager();
+		
+		ProprietarioDAO PDao = new ProprietarioDAO(em);
+		Proprietario entidade = new Proprietario();
+		
+		PDao.Cadastrar(entidade);
+		try {
+			PDao.Commit();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		em.close();
+		emf.close();
+	}
+}

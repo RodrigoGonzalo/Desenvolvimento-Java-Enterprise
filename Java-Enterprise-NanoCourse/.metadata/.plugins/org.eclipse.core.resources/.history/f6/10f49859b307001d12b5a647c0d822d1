@@ -1,0 +1,14 @@
+package br.com.java.dao;
+
+import javax.persistence.EntityManager;
+
+import br.com.java.entidades.Proprietario;
+
+public class ProprietarioDAO extends GenericDAO<Proprietario,Integer> {
+
+	public ProprietarioDAO(EntityManager em) {
+		super(em);
+		// TODO Auto-generated constructor stub
+	}
+
+}

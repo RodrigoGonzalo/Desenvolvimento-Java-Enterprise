@@ -1,0 +1,20 @@
+package br.com.java.testes;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class TesteProprietario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPQL3");
+		EntityManager em = emf.createEntityManager();
+		
+		ProprietarioDAO PDao = new ProprietarioDAO(em);
+		
+		em.close();
+		emf.close();
+	}
+
+}

@@ -1,0 +1,14 @@
+package br.com.java.dao;
+
+import javax.persistence.EntityManager;
+
+import br.com.java.entidades.Carros;
+
+public class CarrosDAO extends GenericDAO<Carros,Integer>{
+
+	public CarrosDAO(EntityManager em) {
+		super(em);
+		// TODO Auto-generated constructor stub
+	}
+
+}
